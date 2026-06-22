@@ -1,32 +1,31 @@
 # User Management API
 
 ## Project Overview
-This project is a robust backend API built to demonstrate professional-grade database integration using **Node.js, Express, and Prisma ORM**. The API facilitates structured data operations, allowing for the seamless management of user records within a relational database.
+This project is a backend API built to demonstrate professional-grade database integration using Node.js, Express, and Prisma ORM. The API facilitates structured data operations, allowing for the seamless management of user records within a relational database.
 
 ## Technical Stack
-* **Runtime**: Node.js
-* **Framework**: Express.js
-* **ORM**: Prisma
-* **API Testing**: Thunder Client
+* Runtime: Node.js
+* Framework: Express.js
+* ORM: Prisma
+* API Testing: Thunder Client
 
 ## Implemented CRUD Operations
 This API implements the standard Create, Read, Update, and Delete (CRUD) pattern:
 
-* **Create (POST)**: Adds new user records to the database.
-* **Read (GET)**: Fetches and displays existing user records.
-* **Update (PUT)**: Enables modification of existing user data.
-* **Delete (DELETE)**: Securely removes records from the system.
+* Create (POST): Adds new user records to the database.
+* Read (GET): Fetches and displays existing user records.
+* Update (PUT): Enables modification of existing user data.
+* Delete (DELETE): Securely removes records from the system.
 
 ## Setup Instructions
-1. **Clone the repository**:
-   ```bash
+1. Clone the repository:
    git clone <your-repository-url>
+2. Install dependencies:
+   npm install
+3. Run the server:
+   node server.js
 
-Key Learnings
+## Key Learnings
 This project provided deep insight into:
-
-Synchronizing application logic with database schemas via Prisma.
-
-Handling asynchronous requests to prevent blocking the server.
-
-Building scalable RESTful routes that follow standard naming conventions.
+* Synchronizing application logic with database schemas via Prisma.
+* Handling asynchronous requests to prevent blocking the server.

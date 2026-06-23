@@ -27,35 +27,35 @@ app.post('/api/data', (req, res) => {
     });
 });
 // 3. UPDATE ROUTE (Corrected)
-// app.put('/api/users/:id', async (req, res) => {
-//     const { id } = req.params;
-//     const { email, name } = req.body;
+ app.put('/api/users/:id', async (req, res) => {
+     const { id } = req.params;
+    const { email, name } = req.body;
     
-//     try {
-//         const updatedUser = await prisma.user.update({
-//             where: { id: Number(id) }, // Ensuring it is a number
-//             data: { email, name },
-//         });
-//         res.json(updatedUser);
-//     } catch (error) {
-//         console.error(error); // This will show the real error in your terminal
-//         res.status(500).json({ error: "Update failed. Does the ID exist?" });
-//     }
-// });
+     try {
+        const updatedUser = await prisma.user.update({
+            where: { id: Number(id) }, // Ensuring it is a number
+            data: { email, name },
+         });
+         res.json(updatedUser);
+    } catch (error) {
+        console.error(error); // This will show the real error in your terminal
+         res.status(500).json({ error: "Update failed. Does the ID exist?" });
+     }
+ });
 
 // 4. DELETE ROUTE (Corrected)
-// app.delete('/api/users/:id', async (req, res) => {
-//     const { id } = req.params; // This is a string
+ app.delete('/api/users/:id', async (req, res) => {
+     const { id } = req.params; // This is a string
     
-//     try {
-//         await prisma.user.delete({
-//             where: { id: parseInt(id) }, // Convert string to number
-//         });
-//         res.json({ message: "User deleted successfully" });
-//     } catch (error) {
-//         res.status(400).json({ error: "User not found or delete failed" });
-//     }
-// });
+     try {
+        await prisma.user.delete({
+             where: { id: parseInt(id) }, // Convert string to number
+         });
+        res.json({ message: "User deleted successfully" });
+     } catch (error) {
+         res.status(400).json({ error: "User not found or delete failed" });
+     }
+ });
 
 
 
